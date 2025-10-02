@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>City Information</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h2>CSS Layout Float</h2>
+<p>In this example, we have created a header, two columns/boxes and a footer.</p>
+<header>
+  <h2>Cities</h2>
+</header>
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">London</a></li>
+    <li><a href="#" onclick="showCity('london')">London</a></li>
+    <li><a href="#" onclick="showCity('paris')">Paris</a></li>
+    <li><a href="#" onclick="showCity('tokyo')">Tokyo</a></li>
+    </ul>
+  </nav>
+  <article id="london">
+    <h1>London</h1>
+    <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+  </article>
+  <article id="paris" style="display:none;">
+    <h1>Paris</h1>
+    <p>Paris is the capital city of France. It is known for its art, gastronomy, and culture.</p>
+    <p>The city has about 2 million inhabitants and is famous for the Eiffel Tower.</p>
+  </article>
+  <article id="tokyo" style="display:none;">
+    <h1>Tokyo</h1>
+    <p>Tokyo is the capital city of Japan. It is a major financial center and the most populous metropolitan area in the world.</p>
+    <p>Tokyo has over 13 million inhabitants and is known for its modernity and tradition.</p>
+  </article>
+</section>
+<footer>
+  <p> this is Footer</p>
+</footer>
+<script>
+function showCity(city) {
+  document.getElementById('london').style.display = 'none';
+  document.getElementById('paris').style.display = 'none';
+  document.getElementById('tokyo').style.display = 'none';
+  document.getElementById(city).style.display = 'block';
+}
+</script>
+</body>
+</html>
